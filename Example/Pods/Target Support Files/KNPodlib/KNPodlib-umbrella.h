@@ -10,6 +10,9 @@
 #endif
 #endif
 
+#import "HCPEnvrionmentalVariables.h"
+#import "KNFeedbackViewController.h"
+#import "KNTestWebViewController.h"
 
 FOUNDATION_EXPORT double KNPodlibVersionNumber;
 FOUNDATION_EXPORT const unsigned char KNPodlibVersionString[];
