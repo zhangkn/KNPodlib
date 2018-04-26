@@ -46,7 +46,9 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
+    
     self = [super initWithFrame:frame];
+    NSLog(@"kninitWithFrame");
     if (self) {
         //设置自己属性
         //构建子控件
