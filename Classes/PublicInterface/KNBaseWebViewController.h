@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIWebView+TS_JavaScriptContext.h"
-#import "HCPPopLoadingDialog.h"
 
 
 /**
@@ -20,6 +18,6 @@
  总的解决思路
  所以使dismissViewControllerAnimated调用一次，或者让UIDocumentMenuViewController找不到presentingViewController即可。
  */
-@interface KNBaseWebViewController : UIViewController <TSWebViewDelegate,UIAlertViewDelegate>
+@interface KNBaseWebViewController : UIViewController
 
 @end

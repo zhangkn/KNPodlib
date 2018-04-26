@@ -11,7 +11,11 @@
 #import "Const.h"
 #import "IPLoadingTool.h"
 
-@interface KNBaseWebViewController ()
+#import "UIWebView+TS_JavaScriptContext.h"
+#import "HCPPopLoadingDialog.h"
+
+
+@interface KNBaseWebViewController () <TSWebViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,strong) UIView  *statusBarView;
 @property (nonatomic,weak) UIWebView  *webView;

@@ -7,7 +7,7 @@
 //
 
 #import "HWComposePhotosView.h"
-#import "UIView+Extension.h"
+//#import "UIView+Extension.h"
 #import "KNShowImageView.h"
 //图片上传接口暂时废弃
 //#import "NSMutableURLRequestTool.h"
@@ -16,7 +16,7 @@
 
 @interface HWComposePhotosView ()<KNShowImageViewDelegate>
 
-@property (nonatomic,weak) UIButton *addPhotoButton;
+@property (nonatomic,weak) KNUIButton *addPhotoButton;
 
 @end
 

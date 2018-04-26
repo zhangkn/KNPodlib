@@ -1,6 +1,7 @@
 //
 
 #import "HCPCMPayProgress.h"
+#import "Const.h"
 
 //#define MYBUNDLE_NAME @"KNStaticBundle.bundle"
 //

@@ -5,8 +5,8 @@
 //  Created by devzkn on 9/30/16.
 //
 #import <UIKit/UIKit.h>
-#import "UIView+Extension.h"
-#import "NSString+Extension.h"
+//#import "UIView+Extension.h"
+//#import "NSString+Extension.h"
 #import "Const.h"
 
 #define HWTextViewFont  [UIFont systemFontOfSize:14]

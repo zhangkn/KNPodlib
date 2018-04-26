@@ -57,6 +57,7 @@
 }
 
 - (void)setupSubviews{
+    NSLog(@"setupSubviews");
     self.imageView.hidden = NO;
     
     [self.deleteBtn setImage:[self imageWithImageName:@"deleteX.png"] forState:UIControlStateNormal];
@@ -64,6 +65,7 @@
 
 - (UIImage*)imageWithImageName:(NSString*)name{
     NSString *image = [[NSBundle mainBundle] pathForResource:name ofType:nil inDirectory:MYBUNDLE_NAME];
+    NSLog(@"knimage: %@",image);
     return  [UIImage imageWithContentsOfFile:image];
 }
 

@@ -2,7 +2,7 @@
 //
 
 #import "HCPPopLoadingDialog.h"
-
+#import "Const.h"
 @implementation HCPPopLoadingDialog
 
 @synthesize superView;
@@ -64,6 +64,7 @@ static HCPPopLoadingDialog *_sharedClient = nil;
 //        NSBundle *bundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:MYBUNDLE_NAME withExtension:nil]];
 //        self = [bundle loadNibNamed:@"PassWordKeyBoard" owner:nil options:nil].firstObject;
 //        self.cmpayProgress = [[bundle loadNibNamed:@"CMPayProgress" owner:nil options:nil] firstObject];
+//        MYBUNDLE
         self.cmpayProgress = [[MYBUNDLE loadNibNamed:@"HCPCMPayProgress" owner:nil options:nil] firstObject];
         CGRect fullRect = [UIScreen mainScreen].bounds;
         self.contentView = [[UIView alloc] initWithFrame:fullRect];

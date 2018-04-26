@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'KNPodlib'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of KNPodlib.'
+  s.summary          = 'KNPodlib Improve feedback interface and customize webview functionality'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,13 +30,13 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 #类库的源文件将位于Pod/Classes文件夹下
-  s.source_files = 'KNPodlib/Classes/**/*'
-#  代替了KNStaticBundle.bundle的资源管理方式；资源文件位于Pod/Assets文件夹
+  s.source_files = 'Classes/**/*'
+  #  代替了KNStaticBundle.bundle的资源管理方式；资源文件位于Pod/Assets文件夹;   使用了 s.resource_bundles，之后，会自动创建KNPodlib.bundle
    s.resource_bundles = {
-     'KNPodlib' => ['KNPodlib/Assets/*.png']
+     'KNPodlib' => ['Assets/*.png']
    }
    #指定暴露的头文件的搜索位置
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+   s.public_header_files = 'Classes/PublicInterface/*.h'
 #  指定依赖的SDK中的framework和类库 s.libraries；需要注意，依赖项不仅要包含你自己类库的依赖，还要包括所有第三方类库的依赖；例如ASIHTTPRequest的依赖情况如下：
 #s.frameworks = 'MobileCoreServices', 'CFNetwork', 'CoreGraphics' #ASIHTTPRequest的依赖
 #s.libraries  = 'z.1' #ASIHTTPRequest的依赖

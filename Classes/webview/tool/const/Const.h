@@ -26,3 +26,7 @@ extern   NSString *const PREBaseURL ;
 extern   NSString *const UATBaseURL;
 extern   NSString *const SITINTRANETBaseURL ;
 extern   NSString *const SITEXTRANETBaseURL ;
+//KNPodlib.bundle
+#define MYBUNDLE_NAME @"KNPodlib.bundle"
+#define MYBUNDLE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
+#define MYBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]

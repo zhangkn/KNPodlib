@@ -13,7 +13,7 @@
 @interface HWPlaceholderTextView ()
 
 /** textView输入控件的占位label*/
-@property (nonatomic,weak) UILabel *textViewPalceHolderLabel;
+@property (nonatomic,weak) KNUILabel *textViewPalceHolderLabel;
 
 
 @end
