@@ -37,8 +37,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-//    [self setupFeedback];
-        [self setupKNTestWebViewController];
+    [self setupFeedback];
+//        [self setupKNTestWebViewController];
 }
 //app嵌入H5页面的通用模版的 例子
 - (void)setupKNTestWebViewController{

@@ -33,6 +33,7 @@
         UIButton *tmpView = [[KNUIButton alloc]init];
         _addPhotoButton = tmpView;
         NSString *image = [[NSBundle mainBundle] pathForResource:@"store_add.png" ofType:nil inDirectory:MYBUNDLE_NAME];
+        NSLog(@"knimage %@:",image);
         [tmpView setImage:[UIImage imageWithContentsOfFile:image] forState:UIControlStateNormal];
         [tmpView addTarget:self action:@selector(clickAddPhotoButton) forControlEvents:UIControlEventTouchUpInside];
         tmpView.backgroundColor =[UIColor whiteColor];
