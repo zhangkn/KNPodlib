@@ -11,6 +11,8 @@
 #endif
 
 #import "HCPEnvrionmentalVariables.h"
+#import "KNBaseViewController.h"
+#import "KNBaseWebViewController.h"
 #import "KNFeedbackViewController.h"
 #import "KNTestWebViewController.h"
 

@@ -1,6 +1,5 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
-#import "Const.h"
 #else
 #ifndef FOUNDATION_EXPORT
 #if defined(__cplusplus)
@@ -11,14 +10,3 @@
 #endif
 #endif
 
-//调试模式
-
-#ifdef DEBUG
-
-#define HSLong(...)     NSLog(__VA_ARGS__)
-
-#else//发布模式
-
-#define HSLong(...)
-
-#endif
