@@ -1,5 +1,6 @@
 use_frameworks!
-
+#cd Example ;执行pod install，让demo项目安装依赖项并更新配置
+#pod install --no-repo-update
 target 'KNPodlib_Example' do
   pod 'KNPodlib', :path => '../'
 
@@ -8,6 +9,8 @@ target 'KNPodlib_Example' do
 
     pod 'Specta'
     pod 'Expecta'
+#    Would you like to do view based testing? [ Yes / No ]
+#    > Yes： using FBSnapShotTestCase, if you are using Specta/Expecta then we include a Pod to improve the syntax
     pod 'FBSnapshotTestCase'
     pod 'Expecta+Snapshots'
   end

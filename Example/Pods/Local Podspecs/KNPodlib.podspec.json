@@ -1,0 +1,22 @@
+{
+  "name": "KNPodlib",
+  "version": "0.1.0",
+  "summary": "A short description of KNPodlib.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zhangkn/KNPodlib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhangkn": "zhangkunnan@qinbaowan.com"
+  },
+  "source": {
+    "git": "https://github.com/zhangkn/KNPodlib.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "KNPodlib/Classes/**/*"
+}

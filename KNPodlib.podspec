@@ -1,7 +1,7 @@
 #
 # Be sure to run `pod lib lint KNPodlib.podspec' to ensure this is a
 # valid spec before submitting.
-#
+#http://guides.cocoapods.org/syntax/podspec.html
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
@@ -29,14 +29,17 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
+#类库的源文件将位于Pod/Classes文件夹下
   s.source_files = 'KNPodlib/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'KNPodlib' => ['KNPodlib/Assets/*.png']
-  # }
-
+#  代替了KNStaticBundle.bundle的资源管理方式；资源文件位于Pod/Assets文件夹
+   s.resource_bundles = {
+     'KNPodlib' => ['KNPodlib/Assets/*.png']
+   }
+   #指定暴露的头文件的搜索位置
   # s.public_header_files = 'Pod/Classes/**/*.h'
+#  指定依赖的SDK中的framework和类库 s.libraries；需要注意，依赖项不仅要包含你自己类库的依赖，还要包括所有第三方类库的依赖；例如ASIHTTPRequest的依赖情况如下：
+#s.frameworks = 'MobileCoreServices', 'CFNetwork', 'CoreGraphics' #ASIHTTPRequest的依赖
+#s.libraries  = 'z.1' #ASIHTTPRequest的依赖
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

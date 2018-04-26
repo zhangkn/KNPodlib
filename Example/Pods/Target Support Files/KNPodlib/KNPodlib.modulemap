@@ -1,0 +1,6 @@
+framework module KNPodlib {
+  umbrella header "KNPodlib-umbrella.h"
+
+  export *
+  module * { export * }
+}

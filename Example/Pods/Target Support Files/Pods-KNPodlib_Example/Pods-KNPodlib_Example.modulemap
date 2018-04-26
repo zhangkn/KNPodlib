@@ -1,0 +1,6 @@
+framework module Pods_KNPodlib_Example {
+  umbrella header "Pods-KNPodlib_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
