@@ -28,13 +28,17 @@
     self.addPhotoButton.hidden = NO;
 }
 
+
 - (UIButton *)addPhotoButton{
     if (nil == _addPhotoButton) {
         UIButton *tmpView = [[KNUIButton alloc]init];
         _addPhotoButton = tmpView;
-        NSString *image = [[NSBundle mainBundle] pathForResource:@"store_add.png" ofType:nil inDirectory:MYBUNDLE_NAME];
-        NSLog(@"knimage %@:",image);
-        [tmpView setImage:[UIImage imageWithContentsOfFile:image] forState:UIControlStateNormal];
+        // 此时的MYBUNDLE_NAME ，确保包含在工程中
+        
+        
+//        NSString *image = [[NSBundle mainBundle] pathForResource:@"store_add.png" ofType:nil inDirectory:MYBUNDLE_NAME];
+//        NSLog(@"knimage %@:， image2:%@",image,[UIImage imageNamed:@"store_add.png"]);//knimage (null):
+        [tmpView setImage:[KNResourceTool processPng:@"store_add.png"] forState:UIControlStateNormal];
         [tmpView addTarget:self action:@selector(clickAddPhotoButton) forControlEvents:UIControlEventTouchUpInside];
         tmpView.backgroundColor =[UIColor whiteColor];
         [self addSubview:_addPhotoButton];

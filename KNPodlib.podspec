@@ -33,7 +33,9 @@ TODO: Add long description of the pod here.
   s.source_files = 'Classes/**/*'
   #  代替了KNStaticBundle.bundle的资源管理方式；资源文件位于Pod/Assets文件夹;   使用了 s.resource_bundles，之后，会自动创建KNPodlib.bundle
    s.resource_bundles = {
-     'KNPodlib' => ['Assets/*.png']
+       'KNPodlib' => ['Assets/*.png'] #key 是 bundle 的名称，value 是需要包括的文件的通配 patterns;CocoaPods 官方强烈推荐使用 resource_bundles，因为用 key-value 可以避免相同名称资源的名称冲突We strongly recommend library developers to adopt resource bundles as there can be name collisions using the resources attribute.
+#       'OtherResources' => ['MapView/Map/OtherResources/*.png']
+
    }
    #指定暴露的头文件的搜索位置
    s.public_header_files = 'Classes/PublicInterface/*.h'

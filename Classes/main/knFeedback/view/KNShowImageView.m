@@ -64,9 +64,13 @@
 }
 
 - (UIImage*)imageWithImageName:(NSString*)name{
+    
+    
+    return [KNResourceTool setupPng:name];
+    
     NSString *image = [[NSBundle mainBundle] pathForResource:name ofType:nil inDirectory:MYBUNDLE_NAME];
     NSLog(@"knimage: %@",image);
-    return  [UIImage imageWithContentsOfFile:image];
+    return [UIImage imageWithContentsOfFile:image];
 }
 
 - (void)setImage:(UIImage *)image{

@@ -65,7 +65,7 @@ static HCPPopLoadingDialog *_sharedClient = nil;
 //        self = [bundle loadNibNamed:@"PassWordKeyBoard" owner:nil options:nil].firstObject;
 //        self.cmpayProgress = [[bundle loadNibNamed:@"CMPayProgress" owner:nil options:nil] firstObject];
 //        MYBUNDLE
-        self.cmpayProgress = [[MYBUNDLE loadNibNamed:@"HCPCMPayProgress" owner:nil options:nil] firstObject];
+        self.cmpayProgress = [[knmainBundle loadNibNamed:@"HCPCMPayProgress" owner:nil options:nil] firstObject];
         CGRect fullRect = [UIScreen mainScreen].bounds;
         self.contentView = [[UIView alloc] initWithFrame:fullRect];
 //

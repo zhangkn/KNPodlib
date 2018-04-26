@@ -10,6 +10,7 @@
 #import "KNUiImageView.h"
 #import "KNUIButton.h"
 #import "KNUILabel.h"
+#import "KNResourceTool.h"
 /** 即访问其他类定义的全局常量 HWClientId */
 //extern NSString * const HWClientId ; //声明全局常量变量（引用某个常量，来避免多处定义同一个全局变量，导致重复定义错误）通常是在定义全局常量的
 
@@ -28,5 +29,14 @@ extern   NSString *const SITINTRANETBaseURL ;
 extern   NSString *const SITEXTRANETBaseURL ;
 //KNPodlib.bundle
 #define MYBUNDLE_NAME @"KNPodlib.bundle"
-#define MYBUNDLE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
-#define MYBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
+//#define MYBUNDLE_PATH [[NSBundle bundleForClass:NSClassFromString(@"Const")].resourcePath stringByAppendingPathComponent:MYBUNDLE_NAME]
+
+#define MYBUNDLE_PATH [[NSBundle bundleForClass:[self class]].resourcePath stringByAppendingPathComponent:MYBUNDLE_NAME]
+
+#define mainBundle_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
+
+#define knmainBundle [NSBundle bundleWithPath: mainBundle_PATH]
+
+#define knpngBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
+
+
