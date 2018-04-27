@@ -32,7 +32,7 @@ extern   NSString *const SITEXTRANETBaseURL ;
 //#define MYBUNDLE_PATH [[NSBundle bundleForClass:NSClassFromString(@"Const")].resourcePath stringByAppendingPathComponent:MYBUNDLE_NAME]
 
 #define MYBUNDLE_PATH [[NSBundle bundleForClass:[self class]].resourcePath stringByAppendingPathComponent:MYBUNDLE_NAME]
-
+//strbundlePath
 #define mainBundle_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
 
 #define knmainBundle [NSBundle bundleWithPath: mainBundle_PATH]

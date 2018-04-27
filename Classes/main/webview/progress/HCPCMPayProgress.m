@@ -3,11 +3,9 @@
 #import "HCPCMPayProgress.h"
 #import "Const.h"
 
-//#define MYBUNDLE_NAME @"KNStaticBundle.bundle"
 //
-//#define MYBUNDLE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
-//#define MYBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
-
+//#define knstrbundlePath [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: knstrbundlePath]
+//#define MYBUNDLE [NSBundle bundleWithPath: knstrbundlePath]
 
 
 @interface HCPCMPayProgress()
@@ -61,20 +59,21 @@
 - (void)startAnimation{
     
     [UIView animateWithDuration:0.15 animations:^{
+        //knstrbundlePath
         if (self.index == 1) {
-            self.image1.image =[UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", MYBUNDLE_NAME, @"hebaoWhitePoint"]];
-            self.image2.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", MYBUNDLE_NAME, @"hebaoGrayPoint"]];
-            self.image3.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", MYBUNDLE_NAME, @"hebaoGrayPoint"]];
+            self.image1.image =[KNResourceTool processPng:@"hebaoWhitePoint"];
+            self.image2.image = [KNResourceTool processPng:@"hebaoGrayPoint"];
+            self.image3.image =  [KNResourceTool processPng:@"hebaoGrayPoint"];
             self.index = self.index + 1;
         }else if (self.index == 2){
-            self.image1.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", MYBUNDLE_NAME, @"hebaoGrayPoint"]];
-            self.image2.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", MYBUNDLE_NAME, @"hebaoWhitePoint"]];
-            self.image3.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", MYBUNDLE_NAME, @"hebaoGrayPoint"]];
+            self.image1.image = [KNResourceTool processPng:@"hebaoGrayPoint"];
+            self.image2.image =[KNResourceTool processPng:@"hebaoWhitePoint"];
+            self.image3.image = [KNResourceTool processPng:@"hebaoGrayPoint"];
             self.index = self.index + 1;
         }else if (self.index == 3){
-            self.image1.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", MYBUNDLE_NAME, @"hebaoGrayPoint"]];
-            self.image2.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", MYBUNDLE_NAME, @"hebaoGrayPoint"]];
-            self.image3.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", MYBUNDLE_NAME, @"hebaoWhitePoint"]];
+            self.image1.image =  [KNResourceTool processPng:@"hebaoGrayPoint"];
+            self.image2.image =  [KNResourceTool processPng:@"hebaoGrayPoint"];
+            self.image3.image =  [KNResourceTool processPng:@"hebaoWhitePoint"];
             self.index = 1;
         }else{
             return;
