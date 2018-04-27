@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KNPodlib'
-  s.version          = '0.1.0'
+  s.version          = '0.1.3'
   s.summary          = 'KNPodlib Improve feedback interface and customize webview functionality'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,9 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhangkn' => 'zhangkunnan@qinbaowan.com' }
-  s.source           = { :git => 'https://github.com/zhangkn/KNPodlib.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/zhangkn/KNPodlib.git', :tag => s.version.to_s } #将这个Pod版本与Git仓库中相同版本的comit绑定
+  #  s.source = { :git => "https://github.com/zhangkn/KNPodlib.git", :commit => "68defea" } #将这个Pod版本与Git仓库中某个commit绑定
+
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
@@ -38,10 +40,17 @@ TODO: Add long description of the pod here.
 
    }
    #指定暴露的头文件的搜索位置
-   s.public_header_files = 'Classes/PublicInterface/*.h'
+   s.public_header_files = 'Classes/PublicInterface/*.h' #“**” 表示匹配所有子目录
+   
+   ########---- 第三方库的依赖声明--##########
 #  指定依赖的SDK中的framework和类库 s.libraries；需要注意，依赖项不仅要包含你自己类库的依赖，还要包括所有第三方类库的依赖；例如ASIHTTPRequest的依赖情况如下：
 #s.frameworks = 'MobileCoreServices', 'CFNetwork', 'CoreGraphics' #ASIHTTPRequest的依赖
-#s.libraries  = 'z.1' #ASIHTTPRequest的依赖
-  # s.frameworks = 'UIKit', 'MapKit'
+#s.libraries  = 'z.1' #ASIHTTPRequest的依赖 # 引用静态库：去掉头尾的lib，用“,”分割
+# s.frameworks = 'UIKit', 'MapKit' # 引用公有framework : 用”,”分割. 去掉尾部的”.framework”
+#引用自己生成的framework: 这个不要省略.framework;
+#spec.ios.vendored_frameworks = 'Pod/Assets/*.framework' #用”,”分割 路径从.podspec所在目录为根目录的相对路径
   # s.dependency 'AFNetworking', '~> 2.3'
+  # 引用自己生成的.a文件，添加到Pod/Assets文件夹里. Demo的Example文件夹里也需要添加一下, 不然找不到
+#  spec.ios.vendored_libraries = 'Pod/Assets/*.a'
+#在提交到私有仓库的时候需要加上--use-libraries
 end
