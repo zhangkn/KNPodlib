@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KNPodlib'
-  s.version          = '0.1.5'
+  s.version          = '0.1.8'
   s.summary          = 'KNPodlib Improve feedback interface and customize webview functionality'
 
 # This description is used to generate tags and improve search results.
@@ -32,10 +32,11 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 #类库的源文件将位于Pod/Classes文件夹下
-  s.source_files = 'Classes/**/*'
+#  s.source_files = 'Classes/**/*'
+s.source_files = 'Classes/**/*.{h,m}'
   #  代替了KNStaticBundle.bundle的资源管理方式；资源文件位于Pod/Assets文件夹;   使用了 s.resource_bundles，之后，会自动创建KNPodlib.bundle
   # xib， s.resources 这种方式会直接copynib 到目标工程
-  #  s.resources = ["images/*.png", "classes/MyView.xib"] #
+#  s.resources = ["classes/**/*.xib"] #
    s.resource_bundles = {
        'KNPodlib' => ['Assets/*.png','Classes/**/*.xib'] #key 是 bundle 的名称，value 是需要包括的文件的通配 patterns;CocoaPods 官方强烈推荐使用 resource_bundles，因为用 key-value 可以避免相同名称资源的名称冲突We strongly recommend library developers to adopt resource bundles as there can be name collisions using the resources attribute.
 #       'OtherResources' => ['MapView/Map/OtherResources/*.png']

@@ -22,13 +22,15 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-
-
+//#define MYBUNDLE_NAME @"KNPodlib.bundle"
+//#define MYBUNDLE_PATH [[NSBundle bundleForClass:[self class]].resourcePath stringByAppendingPathComponent:MYBUNDLE_NAME]
+//#define knpngBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
 - (void)setupFeedback{
     
     
     //         跳转到反馈页面
-    KNFeedbackViewController *feedbackVC = [[KNFeedbackViewController alloc] init];
+//    KNFeedbackViewController *feedbackVC = [[KNFeedbackViewController alloc] initWithNibName:@"KNFeedbackViewController" bundle:knpngBUNDLE];
+    KNFeedbackViewController *feedbackVC  =[[KNFeedbackViewController alloc] init];
     //    feedbackVC.image = ;//截图必须在弹反馈页面之前create。设置默认的图片
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:feedbackVC];
     [self presentViewController:nav animated:YES completion:nil];
@@ -37,8 +39,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    [self setupFeedback];
-//        [self setupKNTestWebViewController];
+//    [self setupFeedback];
+        [self setupKNTestWebViewController];
 }
 //app嵌入H5页面的通用模版的 例子
 - (void)setupKNTestWebViewController{
