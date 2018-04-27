@@ -208,7 +208,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				3FB221143CFA84C44A04A5E0 /* [CP] Embed Pods Frameworks */,
-				FB45639E23EE2EAF5E02765A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,7 +227,6 @@
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
 				3A0DC065C764067B192E6ED5 /* [CP] Embed Pods Frameworks */,
-				AF76D26B6AC1DB2B72F480FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -376,36 +374,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KNPodlib_Example/Pods-KNPodlib_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AF76D26B6AC1DB2B72F480FE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KNPodlib_Tests/Pods-KNPodlib_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FB45639E23EE2EAF5E02765A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KNPodlib_Example/Pods-KNPodlib_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

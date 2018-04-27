@@ -1,6 +1,6 @@
 PODS:
   - Expecta (1.0.6)
-  - Expecta+Snapshots (3.1.1):
+  - "Expecta+Snapshots (3.1.1)":
     - Expecta (~> 1.0)
     - FBSnapshotTestCase/Core (~> 2.0)
     - Specta (~> 1.0)
@@ -9,27 +9,34 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - KNPodlib (0.1.0)
+  - KNPodlib (0.1.3)
   - Specta (1.0.7)
 
 DEPENDENCIES:
   - Expecta
-  - Expecta+Snapshots
+  - "Expecta+Snapshots"
   - FBSnapshotTestCase
   - KNPodlib (from `../`)
   - Specta
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Expecta
+    - "Expecta+Snapshots"
+    - FBSnapshotTestCase
+    - Specta
+
 EXTERNAL SOURCES:
   KNPodlib:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  Expecta+Snapshots: dcff217eef506dabd6dfdc7864ea2da321fafbb8
+  "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  KNPodlib: 416b22aa0d627a8e0c1de032188dc85f2a0accba
+  KNPodlib: 2bec2b8248b4ae20edb2e277686e0311bc5cb07d
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
 PODFILE CHECKSUM: 352dbaf7a8068b23da3858ee8ca91c5b672a7484
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
