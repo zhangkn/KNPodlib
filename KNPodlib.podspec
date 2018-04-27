@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KNPodlib'
-  s.version          = '0.1.10'
+  s.version          = '0.1.11'
   s.summary          = 'KNPodlib Improve feedback interface and customize webview functionality'
 
 # This description is used to generate tags and improve search results.
@@ -55,6 +55,6 @@ s.source_files = 'Classes/**/*.{h,m}'
   # 引用自己生成的.a文件，添加到Pod/Assets文件夹里. Demo的Example文件夹里也需要添加一下, 不然找不到
 #  spec.ios.vendored_libraries = 'Pod/Assets/*.a'
 #在提交到私有仓库的时候需要加上--use-libraries
-s.ios.vendored_frameworks  = 'KNPodlib-0.1.9/ios/KNPodlib.framework'
+#s.ios.vendored_frameworks  = 'KNPodlib-0.1.9/ios/KNPodlib.framework'
 
 end
